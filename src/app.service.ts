@@ -72,12 +72,10 @@ async update(eid:any,toUpdate) {
    console.log(res);
 	const updat =  await this.ER.update({employeeId:eid},toUpdate);
 	console.log(updat); 
-       return { isActive:false};	
    
 }
 
 async destroy(eid:any) {
 	await this.ER.delete({employeeId:eid})
-	//return { deleted:true};
 }
 }
